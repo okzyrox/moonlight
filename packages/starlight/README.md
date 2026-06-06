@@ -4,12 +4,12 @@ A fork of Starlight, to integrate with the Moonwave Extractor from the [Moonwave
 
 Included is an example which showcases the Promise library when being used with Moonlight.
 
-Currently, this requires installing the extractor ahead of time using the Moonwave CLI or by providing a path to an executable of your own extractor.
-
-This project also includes a few extra features from my own fork of Moonwave, primary QOL and new additions:
+This project also includes a few extra features from [my own fork of Moonwave](https://github.com/okzyrox/moonwave), primary QOL and new additions:
 - A summary at the top of the page for the objects in a Class.
 - Icons next to functions, signals, types and properties
 - The `@group` and `@groupdescription` tags, inspired by other docs for grouping together multiple classes.
+
+Currently, this requires installing the extractor ahead of time using the Moonwave CLI or by providing a path to an executable of your own extractor. I recommend using the one from [my fork](https://github.com/okzyrox/moonwave) as it supports the above extra features (`@group` and `@groupdescription`)
 
 ### Known Issues
 - Formatted alerts sometimes do not render correctly (probably a markdown issue)
