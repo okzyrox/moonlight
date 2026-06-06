@@ -1,4 +1,25 @@
-# <img src="https://github.com/withastro/starlight/assets/357379/494fcd83-42aa-4891-87e0-87402fa0b6f3" alt="" align="left" width="40" height="40"> Starlight
+# Moonlight
+
+A fork of Starlight, to integrate with the Moonwave Extractor from the [Moonwave](https://github.com/evaera/moonwave) project so that it can be used to generate documentation using the Starlight documentation website instead of just Docusaurus.
+
+Included is an example which showcases the Promise library when being used with Moonlight.
+
+Currently, this requires installing the extractor ahead of time using the Moonwave CLI or by providing a path to an executable of your own extractor.
+
+This project also includes a few extra features from my own fork of Moonwave, primary QOL and new additions:
+- A summary at the top of the page for the objects in a Class.
+- Icons next to functions, signals, types and properties
+- The `@group` and `@groupdescription` tags, inspired by other docs for grouping together multiple classes.
+
+### Known Issues
+- Formatted alerts sometimes do not render correctly (probably a markdown issue)
+- Properties/Functions/Types with the same name in the same class do not have distinguished links (so they all just link to 1 element.)
+- There is no code highlighting of types at all
+- There is no button to go to code source
+
+# Original README
+
+## <img src="https://github.com/withastro/starlight/assets/357379/494fcd83-42aa-4891-87e0-87402fa0b6f3" alt="" align="left" width="40" height="40"> Starlight
 
 Starlight is a documentation website framework for [Astro][astro].
 

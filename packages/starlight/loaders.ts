@@ -1,5 +1,6 @@
 import { glob, type Loader, type LoaderContext } from 'astro/loaders';
 import { getCollectionPathFromRoot, type StarlightCollection } from './utils/collection';
+export { luauDocsLoader } from './luau-docgen';
 
 // https://github.com/withastro/astro/blob/main/packages/astro/src/core/constants.ts#L87
 // https://github.com/withastro/astro/blob/main/packages/integrations/mdx/src/index.ts#L59

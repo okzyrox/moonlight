@@ -22,3 +22,7 @@ test-results/
 
 # Vercel output
 .vercel
+
+# Examples Dist.
+examples/*/dist
+examples/*/.astro

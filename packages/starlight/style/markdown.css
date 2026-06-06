@@ -134,7 +134,7 @@
 	/* Table styling */
 	.sl-markdown-content table:not(:where(.not-content *)) {
 		display: block;
-		overflow: auto;
+		overflow: hidden; 
 		border-spacing: 0;
 	}
 	.sl-markdown-content :is(th, td):not(:where(.not-content *)) {

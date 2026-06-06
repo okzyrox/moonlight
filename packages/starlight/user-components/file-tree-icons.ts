@@ -258,6 +258,7 @@ export const definitions: Definitions = {
 		'.liquid': 'seti:liquid',
 		'.ls': 'seti:livescript',
 		'.lua': 'seti:lua',
+		'.luau': 'seti:lua',
 		'.markdown': 'seti:markdown',
 		'.md': 'seti:markdown',
 		'.argdown': 'seti:argdown',
