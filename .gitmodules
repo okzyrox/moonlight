@@ -1,0 +1,3 @@
+[submodule "moonwave"]
+	path = moonwave
+	url = https://github.com/okzyrox/moonwave
