@@ -45,7 +45,7 @@ function toRouteId(segments: string[]) {
 }
 
 function toRoute(segments: string[]) {
-    return [toPathSegments(segments)].join('/')
+    return [toPathSegments(segments)].join('/').replace(',', '/');
 }
 
 function getGroupPath(luaClass: LuauClass) {
