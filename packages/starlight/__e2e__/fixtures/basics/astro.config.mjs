@@ -1,5 +1,5 @@
 // @ts-check
-import starlight from '@astrojs/starlight';
+import starlight from '@okzyrox/moonlight';
 import { defineConfig } from 'astro/config';
 import { preventNodeBuiltinDependencyPlugin } from './src/noNodeModule';
 

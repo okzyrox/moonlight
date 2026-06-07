@@ -16,7 +16,7 @@ import { WellKnownElementAttributes, WellKnownAnchorAttributes } from './html.mj
 export const StarlightMarkdocPreset = {
 	nodes: {
 		fence: {
-			render: component('@astrojs/starlight-markdoc/components', 'Code'),
+			render: component('@okzyrox/moonlight-markdoc/components', 'Code'),
 			attributes: {
 				content: {
 					type: String,
@@ -65,7 +65,7 @@ export const StarlightMarkdocPreset = {
 	},
 	tags: {
 		aside: {
-			render: component('@astrojs/starlight/components', 'Aside'),
+			render: component('@okzyrox/moonlight/components', 'Aside'),
 			attributes: {
 				icon: {
 					type: String,
@@ -84,7 +84,7 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		badge: {
-			render: component('@astrojs/starlight/components', 'Badge'),
+			render: component('@okzyrox/moonlight/components', 'Badge'),
 			attributes: {
 				...WellKnownElementAttributes,
 				text: {
@@ -105,7 +105,7 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		card: {
-			render: component('@astrojs/starlight/components', 'Card'),
+			render: component('@okzyrox/moonlight/components', 'Card'),
 			attributes: {
 				icon: {
 					type: String,
@@ -118,7 +118,7 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		cardgrid: {
-			render: component('@astrojs/starlight/components', 'CardGrid'),
+			render: component('@okzyrox/moonlight/components', 'CardGrid'),
 			attributes: {
 				stagger: {
 					type: Boolean,
@@ -128,7 +128,7 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		code: {
-			render: component('@astrojs/starlight/components', 'Code'),
+			render: component('@okzyrox/moonlight/components', 'Code'),
 			attributes: {
 				class: {
 					type: String,
@@ -190,11 +190,11 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		filetree: {
-			render: component('@astrojs/starlight/components', 'FileTree'),
+			render: component('@okzyrox/moonlight/components', 'FileTree'),
 			attributes: {},
 		},
 		icon: {
-			render: component('@astrojs/starlight/components', 'Icon'),
+			render: component('@okzyrox/moonlight/components', 'Icon'),
 			attributes: {
 				class: {
 					type: String,
@@ -219,7 +219,7 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		linkbutton: {
-			render: component('@astrojs/starlight/components', 'LinkButton'),
+			render: component('@okzyrox/moonlight/components', 'LinkButton'),
 			attributes: {
 				...WellKnownAnchorAttributes,
 				href: {
@@ -245,7 +245,7 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		linkcard: {
-			render: component('@astrojs/starlight/components', 'LinkCard'),
+			render: component('@okzyrox/moonlight/components', 'LinkCard'),
 			attributes: {
 				...WellKnownAnchorAttributes,
 				description: {
@@ -263,11 +263,11 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		steps: {
-			render: component('@astrojs/starlight/components', 'Steps'),
+			render: component('@okzyrox/moonlight/components', 'Steps'),
 			attributes: {},
 		},
 		tabitem: {
-			render: component('@astrojs/starlight/components', 'TabItem'),
+			render: component('@okzyrox/moonlight/components', 'TabItem'),
 			attributes: {
 				icon: {
 					type: String,
@@ -280,7 +280,7 @@ export const StarlightMarkdocPreset = {
 			},
 		},
 		tabs: {
-			render: component('@astrojs/starlight/components', 'Tabs'),
+			render: component('@okzyrox/moonlight/components', 'Tabs'),
 			attributes: {
 				syncKey: {
 					type: String,
@@ -304,7 +304,7 @@ export default function starlightMarkdoc({ headingLinks = true } = {}) {
 				? {
 						heading: {
 							...nodes.heading,
-							render: component('@astrojs/starlight-markdoc/components', 'Heading'),
+							render: component('@okzyrox/moonlight-markdoc/components', 'Heading'),
 						},
 					}
 				: {}),

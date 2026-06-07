@@ -1,4 +1,4 @@
-import type { StarlightPlugin } from '@astrojs/starlight/types';
+import type { StarlightPlugin } from '@okzyrox/moonlight/types';
 import type docsearch from '@docsearch/js';
 import type { AstroUserConfig, ViteUserConfig } from 'astro';
 import { resolve } from 'node:path';
@@ -76,7 +76,7 @@ const DocSearchConfigSchema = z
 			 * // ...
 			 *
 			 * // src/config/docsearch.ts
-			 * import type { DocSearchClientOptions } from '@astrojs/starlight-docsearch';
+			 * import type { DocSearchClientOptions } from '@okzyrox/moonlight-docsearch';
 			 *
 			 * export default {
 			 *   appId: '...',
@@ -106,7 +106,7 @@ export default function starlightDocSearch(userConfig: DocSearchUserConfig): Sta
 						'It looks like you already have a `Search` component override in your Starlight configuration.'
 					);
 					logger.warn(
-						'To render `@astrojs/starlight-docsearch`, remove the override for the `Search` component.\n'
+						'To render `@okzyrox/moonlight-docsearch`, remove the override for the `Search` component.\n'
 					);
 				} else {
 					// Otherwise, add the Search component override to the user's configuration.
@@ -114,7 +114,7 @@ export default function starlightDocSearch(userConfig: DocSearchUserConfig): Sta
 						pagefind: false,
 						components: {
 							...config.components,
-							Search: '@astrojs/starlight-docsearch/DocSearch.astro',
+							Search: '@okzyrox/moonlight-docsearch/DocSearch.astro',
 						},
 					});
 				}

@@ -115,7 +115,7 @@ export const starlightExpressiveCode = ({
 				}),
 				preprocessComponentConfig: `
 					import starlightConfig from 'virtual:starlight/user-config'
-					import { useTranslations, getStarlightEcConfigPreprocessor } from '@astrojs/starlight/internal'
+					import { useTranslations, getStarlightEcConfigPreprocessor } from '@okzyrox/moonlight/internal'
 
 					export default getStarlightEcConfigPreprocessor({ docsPath: ${JSON.stringify(docsPath)}, starlightConfig, useTranslations })
 				`,

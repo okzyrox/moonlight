@@ -43,7 +43,7 @@ export default function StarlightIntegration(
 	let userConfig: StarlightConfig;
 	let pluginTranslations: PluginTranslations = {};
 	return {
-		name: '@astrojs/starlight',
+		name: '@okzyrox/moonlight',
 		hooks: {
 			'astro:config:setup': async ({
 				addMiddleware,
@@ -71,22 +71,22 @@ export default function StarlightIntegration(
 				pluginTranslations = pluginResult.pluginTranslations;
 				userConfig = starlightConfig;
 
-				addMiddleware({ entrypoint: '@astrojs/starlight/locals', order: 'pre' });
+				addMiddleware({ entrypoint: '@okzyrox/moonlight/locals', order: 'pre' });
 
 				if (!starlightConfig.disable404Route) {
 					injectRoute({
 						pattern: '404',
 						entrypoint: starlightConfig.prerender
-							? '@astrojs/starlight/routes/static/404.astro'
-							: '@astrojs/starlight/routes/ssr/404.astro',
+							? '@okzyrox/moonlight/routes/static/404.astro'
+							: '@okzyrox/moonlight/routes/ssr/404.astro',
 						prerender: starlightConfig.prerender,
 					});
 				}
 				injectRoute({
 					pattern: '[...slug]',
 					entrypoint: starlightConfig.prerender
-						? '@astrojs/starlight/routes/static/index.astro'
-						: '@astrojs/starlight/routes/ssr/index.astro',
+						? '@okzyrox/moonlight/routes/static/index.astro'
+						: '@okzyrox/moonlight/routes/ssr/index.astro',
 					prerender: starlightConfig.prerender,
 				});
 
@@ -114,7 +114,7 @@ export default function StarlightIntegration(
 				// e.g. if a user has `integrations: [starlight(), tailwind()]`, then the order will be
 				// `[starlight(), expressiveCode(), sitemap(), mdx(), tailwind()]`.
 				// This ensures users can add integrations before/after Starlight and we respect that order.
-				const selfIndex = config.integrations.findIndex((i) => i.name === '@astrojs/starlight');
+				const selfIndex = config.integrations.findIndex((i) => i.name === '@okzyrox/moonlight');
 				config.integrations.splice(selfIndex + 1, 0, ...integrations);
 
 				const remarkRehypeOptions: RemarkRehypePluginOptions = {
@@ -150,21 +150,21 @@ export default function StarlightIntegration(
 											// Prebundle some dependencies for non-Node.js compatible environments to
 											// speed up dev server start time and prevent restarts.
 											'@astrojs/cloudflare/entrypoints/server',
-											'@astrojs/starlight>i18next',
-											'@astrojs/starlight>js-yaml',
-											'@astrojs/starlight>klona/lite',
+											'@okzyrox/moonlight>i18next',
+											'@okzyrox/moonlight>js-yaml',
+											'@okzyrox/moonlight>klona/lite',
 											// TODO: once Expressive Code is refactored/fixed, remove this workaround for
 											// Expressive Code relying on CJS dependencies like postcss not compatible
 											// with non-Node.js compatible environments like Cloudflare.
-											'@astrojs/starlight>astro-expressive-code/components',
-											'@astrojs/starlight>astro-expressive-code>hast-util-select',
-											'@astrojs/starlight>astro-expressive-code>rehype',
-											'@astrojs/starlight>astro-expressive-code>unist-util-visit',
-											'@astrojs/starlight>astro-expressive-code>rehype-format',
-											'@astrojs/starlight>astro-expressive-code>hastscript',
-											'@astrojs/starlight>astro-expressive-code>hast-util-from-html',
-											'@astrojs/starlight>astro-expressive-code>hast-util-to-string',
-											'@astrojs/starlight>astro-expressive-code>@expressive-code/core>postcss',
+											'@okzyrox/moonlight>astro-expressive-code/components',
+											'@okzyrox/moonlight>astro-expressive-code>hast-util-select',
+											'@okzyrox/moonlight>astro-expressive-code>rehype',
+											'@okzyrox/moonlight>astro-expressive-code>unist-util-visit',
+											'@okzyrox/moonlight>astro-expressive-code>rehype-format',
+											'@okzyrox/moonlight>astro-expressive-code>hastscript',
+											'@okzyrox/moonlight>astro-expressive-code>hast-util-from-html',
+											'@okzyrox/moonlight>astro-expressive-code>hast-util-to-string',
+											'@okzyrox/moonlight>astro-expressive-code>@expressive-code/core>postcss',
 										],
 									},
 								},

@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
-import { docsLoader } from '@astrojs/starlight/loaders';
-import { docsSchema } from '@astrojs/starlight/schema';
+import { docsLoader } from '@okzyrox/moonlight/loaders';
+import { docsSchema } from '@okzyrox/moonlight/schema';
 import { glob } from 'astro/loaders';
 
 export const collections = {

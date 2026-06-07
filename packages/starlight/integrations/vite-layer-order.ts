@@ -6,7 +6,7 @@ const pluginTransformIdIncludeFilter = /\.astro$/;
 const pluginTransformIdExcludeFilter = /@astrojs\/starlight\/components\/StarlightPage\.astro$/;
 const pluginTransformCodeFilter = 'StarlightPage.astro';
 
-const starlightPageImportSource = '@astrojs/starlight/components/StarlightPage.astro';
+const starlightPageImportSource = '@okzyrox/moonlight/components/StarlightPage.astro';
 
 /**
  * Vite plugin that ensures the StarlightPage component is always imported first when imported in
