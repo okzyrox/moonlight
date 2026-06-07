@@ -244,7 +244,7 @@ export function renderMetaBadge(label: string) {
 	const key = label as keyof typeof BADGES;
 	if (key in BADGES) {
 		const badge = BADGES[key as keyof typeof BADGES];
-		return `<span class="ml-meta-badge-wrap"><span class="ml-meta-badge" style="background:${badge.Color}22;border:1px solid ${badge.Color};color:${badge.Color};">${badge.Color}<span>${escapeHtml(label)}</span></span><span class="ml-meta-badge-popup" role="tooltip">${escapeHtml(badge.Title)}</span></span>`;
+		return `<span class="ml-meta-badge-wrap"><span class="ml-meta-badge" style="background:${badge.Color}22;border:1px solid ${badge.Color};color:${badge.Color};"><span>${escapeHtml(label)}</span></span><span class="ml-meta-badge-popup" role="tooltip">${escapeHtml(badge.Title)}</span></span>`;
 	}
 
 	return `<span class="ml-meta-badge" style="background:var(--sl-color-gray-6);border:1px solid var(--sl-color-gray-5);color:var(--sl-color-white);">${escapeHtml(label)}</span>`;
